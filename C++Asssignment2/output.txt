@@ -1,0 +1,16 @@
+Player Name: Spencer
+Student Number: 1178551
+Ticket ID: 1
+Generated numbers: 40 41 23 31 30 5 37
+You picked:  31 43 20 21 24 9 21
+Congratulations! You have 1 match(es).
+You picked 1 number correctly but you won nothing.
+
+Bonus Ticket picked:  29 6 17 42 23 5 19
+Congratulations! You have 2 match(es).
+You picked 2 numbers correctly but you won nothing.
+
+Your total winnings for this draw: $0 CAD.
+Thank you for playing!
+Your grand total winnings: $-1 CAD.
+Winning tickets! 
