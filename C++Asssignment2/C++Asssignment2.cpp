@@ -15,6 +15,7 @@ using namespace std;
 int generateRandomNumber(int min, int max) {
 	return rand() % (max - min + 1) + min;
 }
+
 class Ticket {
 private:
 	int ticketId;
@@ -62,7 +63,7 @@ int main()
 
 
 	int number;
-	char computerGenerate;
+	string computerGenerate;
 	int ticketId=0;
 
 	ofstream myFile("outputGroup3.txt");
@@ -121,7 +122,7 @@ int main()
 			cin >> computerGenerate;
 			cin.ignore();
 
-			if (computerGenerate == 'Y' || computerGenerate == 'y' || computerGenerate == 'N' || computerGenerate == 'n') {
+			if (computerGenerate.compare("Y") || computerGenerate.compare("y") || computerGenerate.compare("N") || computerGenerate.compare("n") || computerGenerate.compare("yes") || computerGenerate.compare("no") || computerGenerate.compare("Yes") || computerGenerate.compare("No")) {
 				break;
 			}
 			else {
@@ -129,7 +130,8 @@ int main()
 			}
 		}
 		cout << "\n";
-		if (computerGenerate == 'Y' || computerGenerate == 'y') {
+		//Computer Generate
+		if (computerGenerate.compare("Y") || computerGenerate.compare("y")) {
 			for (int i = 0; i < numberOfLines + prevFreeLines; ++i) {
 				vector<int> playerLineNumbers;
 				for (int j = 0; j < 7; ++j) {
@@ -175,6 +177,7 @@ int main()
 				cout << "\n";
 			}
 		}
+		//User generate
 		else {
 			for (int i = 0; i < numberOfLines+prevFreeLines; ++i) {
 				cout << "Enter 7 unique numbers for Line " << i + 1 << " (between 1 and 45):\n";
@@ -182,7 +185,7 @@ int main()
 				vector<int> playerLineNumbers;
 				//For loop to create all the number in the row
 				for (int j = 0; j < 7; ++j) {
-					
+					validNumber = false;
 					while (!validNumber) {
 						cout << "Enter the " << j + 1 << "th number: ";
 						while (!(cin >> number)) {
@@ -235,6 +238,8 @@ int main()
 
 		}//End of else for player selected numbers
 
+
+		cout << "Chance to win jackpot is : " << numberOfLines*2+prevFreeLines*2 << "/4,072,530\n\n";
 		//Test to see if there are any matches and if so how many. What do they win if there are matches?
 		for (int i = 0; i < numberOfLines+prevFreeLines; ++i) {
 			int matches = 0;
@@ -418,6 +423,8 @@ int main()
 					cout << " " << num;
 					myFile << " " << num;
 				}
+				cout << "\n";
+				myFile << "\n";
 
 			}
 		}
