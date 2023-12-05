@@ -240,6 +240,7 @@ int main()
 
 
 		cout << "Chance to win jackpot is : " << numberOfLines*2+prevFreeLines*2 << "/4,072,530\n\n";
+
 		//Test to see if there are any matches and if so how many. What do they win if there are matches?
 		for (int i = 0; i < numberOfLines+prevFreeLines; ++i) {
 			int matches = 0;
@@ -413,6 +414,7 @@ int main()
 			cout << "Your grand total winnings: $" << grandTotalWinnings + totalSpent << " CAD.\n"; // Display the accumulated winnings
 			myFile << "Thank you for playing!\n";
 			myFile << "Your grand total winnings: $" << grandTotalWinnings + totalSpent << " CAD.\n";
+
 			//Print out winning tickets
 			cout << "Winning tickets! \n";
 			myFile << "Winning tickets! \n";

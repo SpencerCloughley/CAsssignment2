@@ -18,5 +18,11 @@
     <ClCompile Include="C++Asssignment2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ticket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
