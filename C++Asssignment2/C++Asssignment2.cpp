@@ -131,7 +131,7 @@ int main()
 		}
 		cout << "\n";
 		//Computer Generate
-		if (computerGenerate.compare("Y") || computerGenerate.compare("y")) {
+		if (computerGenerate.compare("Y")==0 || computerGenerate.compare("y")==0 || computerGenerate.compare("Yes") == 0 || computerGenerate.compare("yes") == 0) {
 			for (int i = 0; i < numberOfLines + prevFreeLines; ++i) {
 				vector<int> playerLineNumbers;
 				for (int j = 0; j < 7; ++j) {
